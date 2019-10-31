@@ -1,10 +1,20 @@
+html, body {
+	height: 100%;
+}
+
 body {
 	font-size: 10px;
 	background: rgb(139, 194, 215);
+	display: flex;
+	flex-direction: column;
 }
 
 a {
 	text-decoration: none;
+}
+
+.main-header {
+	flex: 0 1 auto;
 }
 
 .logo-text {
@@ -13,6 +23,12 @@ a {
 	text-transform: uppercase;
 	font-family: 'Eagle Lake', cursive;
 	font-size: 37px;
+}
+
+.main-content {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
 }
 
 .thumbnail-title {
@@ -24,6 +40,32 @@ a {
 	font-size: 18px;
 }
 
+.detail-image-container {
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.detail-image-frame {
+	text-align: center;
+	position: relative;
+}
+
+.detail-image {
+	width: 90%;
+}
+
+.detail-image-title {
+	position: absolute;
+	bottom: -16px;
+	left: 4px;
+	font-family: 'Courgette', cursive;
+	color: white;
+	font-size: 40px;
+	text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+}
+
 .thumbnail-image {
 	width: 100%;
 	display: block;
@@ -31,16 +73,21 @@ a {
 }
 
 .thumbnail-list {
+	flex: 0 1 auto;
+	order: 2;
+	display: flex;
+	justify-content: space-between;
 	list-style: none;
 	padding-top: 0;
-}
-
-.thumbnail-item + .thumbnail-item {
-	margin-top: 10px;
+	white-space: nowrap;
+	overflow-x: auto;
 }
 
 .thumbnail-item {
 	border: 1px solid rgb(100%, 100%, 100%);
 	border: 1 px solid rgba(100%, 100%, 100%);
-	display: block;
+	display: inline-block;
+	min-width: 120px;
+	max-width: 120px;
 }
+
